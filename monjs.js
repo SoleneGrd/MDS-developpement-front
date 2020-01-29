@@ -4,4 +4,9 @@ $(document).ready(function(){
     for ( var i = 0; i < 5; i++ ) {
         $('<div class="col-1">' ).appendTo( '#effets' );
     }
+    $( "effets div" ).click(function() {
+        $( this ).hide( 2000, function() {
+            $( this ).removed();
+        });
+    });
 });

@@ -1,0 +1,54 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 10 mars 2020, 09:50:47
+    Author     : apple
+*/
+$mobile-max: 767px;
+$tablet: 768px;
+$tablet-max: 991px;
+$desktop: 992px;
+body{
+    background-color: red;
+}
+.tablet{
+    display: none;
+}
+.box{
+    display: flex;
+    flex-wrap: wrap;
+    article{
+        width: 100%;
+        background: white;
+        margin: 5px;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+}
+@media (min-width: $tablet) AND (max-width: $tablet-max){
+    body{
+        background-color: yellow;
+    }
+    .tablet{
+        display: block;
+    }
+    .box{
+        article{
+            width: calc(50% - 10px);
+        }
+    }
+}
+@media (min-width: $desktop){
+    body{
+        background-color: blue;
+    }
+    .box{
+        article{
+            width: calc(33.33333% - 10px);
+        }
+    }
+}
+
